@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication11.Models.Entities
+namespace PushExample.Models.Entities
 {
     using System;
     using System.Collections.Generic;

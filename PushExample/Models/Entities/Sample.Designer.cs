@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'c:\users\lientm\source\repos\WebApplication11\WebApplication11\Models\Entities\Sample.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Projects\pushnotfication\PushExample\Models\Entities\Sample.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebApplication11.Controllers
+namespace PushExample.Controllers
 {
     public class PushController : Controller
     {

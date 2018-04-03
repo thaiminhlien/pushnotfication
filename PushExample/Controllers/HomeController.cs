@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebApplication11.Models;
+using PushExample.Models;
 using WebPush;
 
-namespace WebApplication11.Controllers
+namespace PushExample.Controllers
 {
     public class HomeController : Controller
     {
@@ -16,7 +16,7 @@ namespace WebApplication11.Controllers
 
             return View();
         }
-        public void action(WebApplication11.Models.Entities.ClientInformation e,string message)
+        public void action(PushExample.Models.Entities.ClientInformation e,string message)
         {
             //var pushEndpoint = @"https://fcm.googleapis.com/fcm/send/elpgb-hTYfE:APA91bEbOObMfgrR2nc-kjfhm1iQscT6hcqGFDXn_IGYFMs5n5KCGIclzMAC_WZDbA34om0Ub9sqyhR1i_3Y0BQPhiZp1CnDWjTr74exx8wJp8KBFbMWhlzNWQJ3zA3LkM8rm2ZkQCjS";
             //var p256dh = @"BASOQRL625ssxHi4QiPRy-Tu9dih25IcVECTGfWqIIROwpq3xsWuwN3bpX3zWF_rv-jSCG08rkv4M2uAhYUnJSQ=";
@@ -58,7 +58,7 @@ namespace WebApplication11.Controllers
         [HttpPost]
         public ActionResult push(string message)
         {
-            using (var ent = new WebApplication11.Models.Entities.sampleEntities())
+            using (var ent = new PushExample.Models.Entities.sampleEntities())
             {
                 var all = ent.ClientInformations;
                 foreach (var i in all)
@@ -73,7 +73,7 @@ namespace WebApplication11.Controllers
         {
             var id = -1;
             var model = JsonConvert.DeserializeObject<subscription>(jsonData);
-            using (var ent = new WebApplication11.Models.Entities.sampleEntities())
+            using (var ent = new PushExample.Models.Entities.sampleEntities())
             {
                 var exist = ent.ClientInformations.Where(u => u.pushEndpoint.Equals(model.endpoint)).FirstOrDefault();
                 if(exist == null)
@@ -104,7 +104,7 @@ namespace WebApplication11.Controllers
         public ActionResult remove(int id)
         {
           
-            using (var ent = new WebApplication11.Models.Entities.sampleEntities())
+            using (var ent = new PushExample.Models.Entities.sampleEntities())
             {
                 var exist = ent.ClientInformations.Find(id);
                 if(exist!=null)

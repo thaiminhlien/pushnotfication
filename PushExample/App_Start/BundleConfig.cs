@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace WebApplication11
+namespace PushExample
 {
     public class BundleConfig
     {
